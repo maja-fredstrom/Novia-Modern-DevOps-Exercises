@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Circle</title>
+
+</head>
+<body>
+<h1> Do want to know area of a circle?</h1>
+<form action="#" method="get">
+    <div>
+        <label for="enteredRadius">Enter the radius : </label>
+        <input type="number" name="enteredRadius" id="enteredRadius">
+    </div>
+    <input type="button" name="Area" value="Area" id="area">
+</form>
+<table id="result">
+    <tr>
+        <th>RADIUS</th>
+        <th>AREA</th>
+    </tr>
+</table>
+
+<script>
+    function addRow(radius, area) {
+        let resultTable = document.getElementById("result");
+        let newRow = resultTable.insertRow(-1);
+        let radiusCell = newRow.insertCell(0);
+        radiusCell.appendChild(document.createTextNode(radius));
+        let areaCell = newRow.insertCell(1);
+        areaCell.appendChild(document.createTextNode(area));
+    }
+
+    document.getElementById("area").addEventListener("click", function () {
+        let radius = document.getElementById("enteredRadius").value;
+        let area = Math.PI * Math.sqrt(radius);
+        addRow(radius, area);
+
+    }, false);
+</script>
+</body>
+</html>
