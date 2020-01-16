@@ -2,6 +2,10 @@ function showErrorMessage(error) {
     document.getElementById("error").innerHTML = error;
 }
 
+function showRepeatedTime() {
+    document.getElementById("repeated").innerHTML = "Number of use: " + repeatedTimes;
+}
+
 function clearErrorMessage() {
     showErrorMessage("");
 }
@@ -15,7 +19,7 @@ function addRowToTable(radius, calculatedValue, tableID) {
     calculationCell.appendChild(document.createTextNode(calculatedValue));
 }
 
-
+let repeatedTimes = 0;
 document.getElementById("radioArea").addEventListener("input", function () {
     if (this.checked)
         document.getElementById("calculateButton").value = "Calculate Area"
@@ -28,11 +32,12 @@ document.getElementById("radioCircumference").addEventListener("input", function
 document.getElementById("calculateButton").addEventListener("click", function () {
     clearErrorMessage();
     let radius = document.getElementById("enteredRadius").value;
-    if (radius <= 1 || radius >= 100 ) {
+    if (radius <= 1 || radius >= 100) {
         showErrorMessage("Please enter a  number between 1 and 100!!");
         document.getElementById("enteredRadius").value = "";
         return;
     }
+    repeatedTimes += 1;
     if (document.getElementById("radioArea").checked) {
         let area = Math.PI * Math.sqrt(radius);
         addRowToTable(radius, area, "areaTable");
@@ -40,4 +45,5 @@ document.getElementById("calculateButton").addEventListener("click", function ()
         let circumference = 2 * Math.PI * radius;
         addRowToTable(radius, circumference, "cTable");
     }
+    showRepeatedTime();
 }, false);

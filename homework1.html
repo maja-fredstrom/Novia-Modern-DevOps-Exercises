@@ -9,8 +9,9 @@
 </head>
 <body>
 <h1>CIRCLES</h1>
-<h2> What do you wish to calculate?</h2>
-<form action="#" method="get">
+<div class="main">
+    <h2> What do you wish to calculate?</h2>
+    <hr>
     <div id="calculationType">
         <input type="radio" name="requestType" id="radioArea" value="area" checked>
         <label for="radioArea">Area</label>
@@ -23,7 +24,7 @@
                placeholder="Radius between 1 & 100">
     </div>
     <input type="button" name="area" value="Calculate Area" id="calculateButton">
-</form>
+</div>
 <div id="valueTables">
     <table id="areaTable">
         <tr>
@@ -39,6 +40,7 @@
     </table>
 </div>
 <p id="error"></p>
-<script type="text/javascript" src="js/homework1.js"></script>
+<div id="repeated"></div>
+<script src="js/homework1.js"></script>
 </body>
 </html>
