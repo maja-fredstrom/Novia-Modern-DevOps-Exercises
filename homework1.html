@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Circle</title>
-
+    <link rel="stylesheet" href="style/stylesheet.css">
 </head>
 <body>
-<h1> Do want to know area of a circle?</h1>
+<h1>CIRCLES</h1>
+<h2> What do you wish to calculate?</h2>
 <form action="#" method="get">
     <div id="calculationType">
         <input type="radio" name="requestType" id="radioArea" value="area" checked>
@@ -22,64 +23,21 @@
     </div>
     <input type="button" name="area" value="Calculate Area" id="calculateButton">
 </form>
-<div style="display: flex">
+<div id="valueTables">
     <table id="areaTable">
         <tr>
             <th>RADIUS</th>
             <th>AREA</th>
         </tr>
     </table>
-    <table id="cTable" style="margin-left: 60px">
+    <table id="cTable">
         <tr>
             <th>RADIUS</th>
             <th>CIRCUMFERENCE</th>
         </tr>
     </table>
 </div>
-<p id="error" style="color: red;"></p>
-<script>
-    function showErrorMessage(error) {
-        document.getElementById("error").innerHTML = error;
-    }
-
-    function clearErrorMessage() {
-        showErrorMessage("");
-    }
-
-    function addRowToTable(radius, calculatedValue, tableID) {
-        let newTable = document.getElementById(tableID);
-        let newRow = newTable.insertRow(-1);
-        let radiusCell = newRow.insertCell(0);
-        radiusCell.appendChild(document.createTextNode(radius));
-        let calculationCell = newRow.insertCell(1);
-        calculationCell.appendChild(document.createTextNode(calculatedValue));
-    }
-
-
-    document.getElementById("radioArea").addEventListener("input", function () {
-        if (this.checked)
-            document.getElementById("calculateButton").value = "Calculate Area"
-    }, false);
-    document.getElementById("radioCircumference").addEventListener("input", function () {
-        if (this.checked)
-            document.getElementById("calculateButton").value = "Calculate Circumference"
-    }, false);
-
-    document.getElementById("calculateButton").addEventListener("click", function () {
-        clearErrorMessage();
-        let radius = document.getElementById("enteredRadius").value;
-        if (radius <= 0) {
-            showErrorMessage("Please enter a positive number!!");
-            return;
-        }
-        if (document.getElementById("radioArea").checked) {
-            let area = Math.PI * Math.sqrt(radius);
-            addRowToTable(radius, area, "areaTable");
-        } else if (document.getElementById("radioCircumference").checked) {
-            let circumference = 2 * Math.PI * radius;
-            addRowToTable(radius, circumference, "cTable");
-        }
-    }, false);
-</script>
+<p id="error"></p>
+<script type="text/javascript" src="js/homework1.js"></script>
 </body>
 </html>
