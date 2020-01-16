@@ -28,8 +28,9 @@ document.getElementById("radioCircumference").addEventListener("input", function
 document.getElementById("calculateButton").addEventListener("click", function () {
     clearErrorMessage();
     let radius = document.getElementById("enteredRadius").value;
-    if (radius <= 0) {
-        showErrorMessage("Please enter a positive number!!");
+    if (radius <= 1 || radius >= 100 ) {
+        showErrorMessage("Please enter a  number between 1 and 100!!");
+        document.getElementById("enteredRadius").value = "";
         return;
     }
     if (document.getElementById("radioArea").checked) {
