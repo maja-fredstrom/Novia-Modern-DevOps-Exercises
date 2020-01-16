@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Circle</title>
+    <link rel="stylesheet" href="style/stylesheet.css">
+</head>
+<body>
+<h1>CIRCLES</h1>
+<h2> What do you wish to calculate?</h2>
+<form action="#" method="get">
+    <div id="calculationType">
+        <input type="radio" name="requestType" id="radioArea" value="area" checked>
+        <label for="radioArea">Area</label>
+        <input type="radio" name="requestType" id="radioCircumference" value="circumference">
+        <label for="radioCircumference">Circumference</label>
+    </div>
+    <div>
+        <label for="enteredRadius">Enter the radius : </label>
+        <input type="number" name="enteredRadius" id="enteredRadius">
+    </div>
+    <input type="button" name="area" value="Calculate Area" id="calculateButton">
+</form>
+<div id="valueTables">
+    <table id="areaTable">
+        <tr>
+            <th>RADIUS</th>
+            <th>AREA</th>
+        </tr>
+    </table>
+    <table id="cTable">
+        <tr>
+            <th>RADIUS</th>
+            <th>CIRCUMFERENCE</th>
+        </tr>
+    </table>
+</div>
+<p id="error"></p>
+<script type="text/javascript" src="js/homework1.js"></script>
+</body>
+</html>

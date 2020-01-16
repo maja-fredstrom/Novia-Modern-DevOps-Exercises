@@ -1,0 +1,33 @@
+body {
+    padding: 30px;
+}
+
+h1, h2 {
+    margin-left: 30px;
+}
+
+form {
+    border: 1px solid gray;
+    margin: 30px;
+}
+
+div {
+    margin: 20px;
+}
+
+table {
+    width: 400px;
+    text-align: center;
+}
+
+#calculateButton {
+    margin: 10px;
+}
+
+#valueTables {
+    display: flex;
+}
+
+#error {
+    color: red;
+}
