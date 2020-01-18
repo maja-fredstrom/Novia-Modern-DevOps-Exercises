@@ -1,18 +1,10 @@
 body {
     padding: 30px;
+    border: 1px solid dimgrey;
 }
 
-h1, h2 {
+h1 {
     margin-left: 30px;
-}
-
-form {
-    border: 1px solid gray;
-    margin: 30px;
-}
-
-div {
-    margin: 20px;
 }
 
 table {
@@ -20,7 +12,17 @@ table {
     text-align: center;
 }
 
+.main {
+    border: 1px solid gray;
+    margin: 30px;
+    padding: 10px;
+}
+
 #calculateButton {
+    margin: 20px 10px;
+}
+
+#calculationType {
     margin: 10px;
 }
 
@@ -30,4 +32,10 @@ table {
 
 #error {
     color: red;
+}
+
+#repeated {
+    text-align: right;
+    color: green;
+
 }
