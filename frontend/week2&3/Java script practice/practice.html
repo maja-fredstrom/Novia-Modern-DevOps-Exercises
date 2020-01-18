@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="se-Fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        div {
+            margin: 10px;
+        }
+
+        label {
+            display: inline-block;
+            width: 100px;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+<h1>Salary calculator:</h1>
+
+<div>
+    <label for="employeeName"> Name:</label>
+    <input type="text" id="employeeName" name="employeeName">
+</div>
+<div>
+    <label for="hourlyWage"> Hourly wage:</label>
+    <input type="number" id="hourlyWage" name="hourlyWage">
+</div>
+<div>
+    <label for="hours">Hours:</label>
+    <input type="number" id="hours" name="hours">
+</div>
+<div>
+    <input type="button" name="calculate" value="Calculate" id="calculate">
+</div>
+
+<p id="salary"> Calculated salary: </p>
+<script>
+    document.getElementById("calculate").addEventListener("click", function () {
+        let employeeName = document.getElementById("employeeName").value;
+        let hourlyWage = document.getElementById("hourlyWage").value;
+        let hours = document.getElementById("hours").value;
+        let salary = hourlyWage * hours;
+        document.getElementById("salary").innerHTML += employeeName + ": " + salary +
+            "<br>";
+    }, false);
+</script>
+</body>
+</html>

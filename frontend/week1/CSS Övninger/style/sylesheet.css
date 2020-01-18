@@ -1,0 +1,42 @@
+body, form {
+    border: solid green;
+    padding: 0 20px 20px;
+}
+
+.green {
+    color: green;
+}
+
+.green.img {
+    width: 100px;
+    height: 75px;
+}
+
+img {
+    width: 200px;
+    height: 150px;
+}
+
+table {
+    color: blue;
+    border-collapse: collapse;
+    border-color: blue;
+    width: 600px;
+}
+
+table, th, td {
+    border: 2px solid blue;
+}
+
+th {
+    color: white;
+    background-color: blue;
+}
+
+.fade {
+    opacity: 10%;
+}
+
+.margin {
+    margin-top: 10px;
+}

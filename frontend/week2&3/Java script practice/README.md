@@ -1,0 +1,1 @@
+Make a web page where the user can enter a person's name, hourly wage and hourly rate as well as calculate and print the gross salary. The name and gross salary are printed in a paragraph, so that if you enter more than one person's data, the paragraph is spliced ​​with new lines.
