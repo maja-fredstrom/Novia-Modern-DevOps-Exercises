@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        div {
+            margin:10px;
+        }
+        label {
+            display:inline-block;
+            width: 100px;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+<div>
+    <label for="name">Namn: </label>
+    <input type="text" id="name">
+</div>
+<div>
+    <label for="hoursalary">Timlön: </label>
+    <input type="number" id="hoursalary">
+</div>
+<div>
+    <label for="hours">Timantal: </label>
+    <input type="number" id="hours">
+</div>
+<div>
+    <input type="button" value="Beräkna" id="calculate">
+</div>
+<p id="salaries">
+</p>
+<script >
+    document.getElementById("calculate").addEventListener("click", function() {
+        let name = document.getElementById("name").value;
+        let hoursalary = document.getElementById("hoursalary").value;
+        let hours = document.getElementById("hours").value;
+        let brutto = hoursalary*hours;
+        document.getElementById("salaries").innerHTML += name + ": " + brutto +
+            "<br>";
+    }, false);
+</script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="se-Fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/sylesheet.css">
+    <title>HTML-Övning-form</title>
+</head>
+<body>
+<hr class="fade">
+<h1>Fyll i följande formulär om du vill ha mera information om en retrieverras</h1>
+<hr class="fade">
+<form action="" method="get">
+    <p class="green">Jag vill ha mera information om följande retrieverraser</p>
+    <table>
+        <tr>
+            <td><input type="checkbox" name="Golden retriever" id="golden">
+                <label for="golden">Golden retriever</label></td>
+            <td><img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWrvcVUwRNj2UaOVCgOnY8vP-hSMgRFYKQamxwH6O8HnsXVM4G8A&sg"
+                    alt="Picture Golden retriever"></td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" name="Labrador retriever" id="labrador">
+                <label for="labrador">Labrador retriever</label></td>
+            <td><img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1-3aJKsz9KJMPEQM0JB1OrSucOylR7OYl77_zudx4TrB8W0Di&s"
+                    alt="Picture of a Labrador retriever"></td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" name="Nova scotia duck tolling retriever" id="novaScotia">
+                <label for="novaScotia">Nova scotia retriever </label></td>
+            <td><img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiVugMvLOjOr8HNRUZ4FebC6AVLD_UOJtqZU1ndOrVAlHOOZsK4Q&s"
+                    alt="Picture of a Nova scotia retriever"></td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" name="Flat coated retriever" id="flatCoated">
+                <label for="flatCoated">Flat coated retriever</label></td>
+            <td><img src="https://i.etsystatic.com/5302623/r/il/a1ece9/1177154922/il_570xN.1177154922_884m.jpg"
+                     alt="Picture of a Flat coated retriever"></td>
+        </tr>
+    </table>
+    <p class="green">Sänd informationen via:</p>
+    <input type="radio" name="contact_type" id="epost" value="epost">
+    <label for="epost" class="green">epost</label><br>
+    <input type="radio" name="contact_type" id="sms" value="sms">
+    <label for="sms" class="green">sms</label><br>
+    <label for="adress" class="green">Adress:</label>
+    <input type="text" id="adress"><br>
+    <input type="button" name="skicka" value="Skicka" class="margin">
+</form>
+<hr class="fade">
+</body>
+</html>
