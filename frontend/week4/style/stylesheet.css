@@ -1,0 +1,16 @@
+body {
+    padding: 30px;
+    border: 1px solid gray;
+}
+
+input {
+    margin: 10px 5px;
+}
+
+#errorMessage {
+    color: red;
+}
+
+#resultText {
+    color: green;
+}
