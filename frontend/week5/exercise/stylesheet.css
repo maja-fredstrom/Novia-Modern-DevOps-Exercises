@@ -1,0 +1,39 @@
+
+body {
+    padding: 30px;
+    border: 1px solid dimgrey;
+}
+
+label {
+    margin-right: 50px;
+}
+
+.results{
+    border: 1px solid dimgrey;
+    width: 200px;
+    text-align: center;
+}
+
+.main {
+    border: 1px solid gray;
+    margin: 30px;
+    padding: 10px;
+}
+
+#inputs {
+    width: 350px;
+}
+
+#tables {
+    border: 1px solid dimgrey;
+    width: 200px;
+    text-align: center;
+}
+
+#calculateRating {
+    margin: 20px 10px;
+}
+
+#errorMessage {
+    color: red;
+}
