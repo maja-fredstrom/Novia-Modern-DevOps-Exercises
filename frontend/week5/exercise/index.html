@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./stylesheet.css">
+    <script type="module" src="java_script_exercise3.js" defer></script>
+    <title>Exams</title>
+</head>
+<body>
+<h1>Do you need help for your classes?</h1>
+<hr>
+<table id="inputs">
+    <tr>
+        <td><label for="courseName">Course :</label></td>
+        <td><input type="text" id="courseName"></td>
+    </tr>
+    <tr>
+        <td><label for="student">Student name:</label></td>
+        <td>
+            <input list="students" id="student" name="student"/>
+            <datalist id="students">
+            </datalist>
+        </td>
+    </tr>
+    <tr>
+        <td><label for="points">Points : </label></td>
+        <td><input type="number" id="points"/></td>
+    </tr>
+</table>
+<input type="button" value="Calculate rating" id="calculateRating"><br>
+<div id="errorMessage"></div>
+<hr>
+<div id="tables">
+</div>
+</body>
+</html>
