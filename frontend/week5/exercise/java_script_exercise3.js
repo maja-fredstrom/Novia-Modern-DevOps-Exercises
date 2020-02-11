@@ -10,7 +10,7 @@ const ELEMENTS = {
 };
 
 const localStorageKey = "courses";
-const allStudents = ["Ezra", "Lu", "Ning", "Johanna", "Maja","Henkka"];
+const allStudents = ["Ezra", "Lu", "Ning", "Johanna", "Maja"];
 let allCourses = [];
 
 
@@ -28,6 +28,19 @@ function Student(name, points) {
             return 5;
         } else {
             return Math.floor(0.25 * points - 1.5);
+        }
+    };
+    this.getGradeType= ()=> {
+        if(this.getGrade() == 0){
+            return "failed";
+        }else if(this.getGrade()<= 2){
+            return "satisfactory";
+        }else if(this.getGrade()<= 4){
+            return "good";
+        }else if(this.getGrade()== 5){
+            return "excellent";
+        }else{
+            return "something went wrong"
         }
     };
     this.toJSON = () => {
@@ -56,6 +69,8 @@ function Course(name) {
         header2.appendChild(document.createTextNode("POINTS"));
         let header3 = newRow.insertCell(2);
         header3.appendChild(document.createTextNode("GRADE"));
+        let header4 = newRow.insertCell(3);
+        header4.appendChild(document.createTextNode("GRADE TYPE"));
     }
 
     function addStudentToTable(newStudent) {
@@ -66,13 +81,14 @@ function Course(name) {
         pointsCell.appendChild(document.createTextNode(newStudent.getPoints()));
         let ratingCell = newStudentRow.insertCell(2);
         ratingCell.appendChild(document.createTextNode(newStudent.getGrade()));
+        let gradeTypeCell = newStudentRow.insertCell(3);
+        gradeTypeCell.appendChild(document.createTextNode(newStudent.getGradeType()));
     }
 
     this.addStudent = (student) => {
         let newStudent = new Student(student.getName(), student.getPoints());
         studentList.push(newStudent);
         addStudentToTable(newStudent);
-        console.log(student.getGrade());
     };
     this.getName = () => {
         return name;
